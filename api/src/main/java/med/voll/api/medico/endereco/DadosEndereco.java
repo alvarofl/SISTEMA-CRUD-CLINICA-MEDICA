@@ -14,6 +14,6 @@ String logradouro,
       @NotBlank(message = "UF é obrigatória")
    String uf,
     String complemento,
-     String numero) 
+     String numero 
     
-{}
+) {}

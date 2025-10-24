@@ -1,11 +1,10 @@
 package med.voll.api.medico;
-    import  jakarta.validation.Valid;
-        import  jakarta..validation.constraints.Email;
-            import jakarta.validation.constraints.NotBlank;
-    import jakarta.validation.constraints.Pattern;
-
-
-    import med.voll.api.DadosEndereco;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+    
+    import med.voll.api.medico.endereco.DadosEndereco;
 import med.voll.api.medico.Especialidade;
 
 
@@ -22,7 +21,7 @@ public record DadosCadastrar (
     @Valid
     DadosEndereco endereco,
 
-    @Valid
+    
     Especialidade especialidade
 
 ){}
