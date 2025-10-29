@@ -1,12 +1,14 @@
 package med.voll.api.controller;
 
-    import  jakarta.validation.Valid;
-    
+    import  org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-    
-import med.voll.api.medico.DadosCadastrar;
+import jakarta.validation.Valid;
+import med.voll.api.medico.DadosCadastrar;  
 
 @RestController
 @RequestMapping("/medicos")
@@ -14,7 +16,7 @@ import med.voll.api.medico.DadosCadastrar;
 public class ControllerMedico {
 
     @PostMapping
-    public ResponseEntity<String> cadastrar(@RequestBody @Valid DadosCadastrar dados) {
+    public ResponseEntity<      String> cadastrar(@RequestBody @Valid DadosCadastrar dados) {
         System.out.println(dados);
         return ResponseEntity.ok("Médico cadastrado com sucesso!");
     }
